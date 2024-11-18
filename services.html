@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Benz Marketing and Banking Company</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="container">
+        <a href="index.html">
+            <img src="company.PNG" alt="Company Logo" class="logo">
+        </a>
+        <h5>BENZ MARKETING AND BANKING COMPANY</h5>
+        <h6>SERVICES</h6>
+        <!-- Tab Buttons -->
+        <div class="tab-buttons">
+            <button class="tab-link active" data-tab="banking">Banking Services</button>
+            <button class="tab-link" data-tab="marketing">Marketing Services</button>
+            <button class="tab-link" data-tab="advisory">Advisory Services</button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div class="tab-content active" id="banking">
+            <h4>Banking Services</h4>
+            <p>We provide comprehensive banking solutions for individuals and businesses:</p>
+            <ul>
+                <li>Personal Banking: Savings, loans, and mobile banking services.</li>
+                <li>Corporate Banking: Business accounts, trade financing, and payroll management.</li>
+                <li>Investment Services: Wealth management, mutual funds, and advisory.</li>
+            </ul>
+        </div>
+
+        <div class="tab-content" id="marketing">
+            <h4>Marketing Services</h4>
+            <p>Innovative marketing solutions to help businesses grow:</p>
+            <ul>
+                <li>Digital Marketing: SEO, social media, and email campaigns.</li>
+                <li>Brand Development: Logo design, brand strategy, and product packaging.</li>
+                <li>Content Marketing: Blogs, videos, and infographics.</li>
+            </ul>
+        </div>
+
+        <div class="tab-content" id="advisory">
+            <h4>Advisory Services</h4>
+            <p>Expert guidance for your business and financial needs:</p>
+            <ul>
+                <li>Business Advisory: Financial planning and marketing strategies.</li>
+                <li>Training: Workshops on financial literacy and CRM skills.</li>
+                <li>Customer Support Optimization: Call center and chatbot integration.</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // JavaScript to handle tab switching
+        const tabs = document.querySelectorAll(".tab-link");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                // Remove active class from tabs and contents
+                tabs.forEach(item => item.classList.remove("active"));
+                contents.forEach(item => item.classList.remove("active"));
+                tab.classList.add("active");
+                document.getElementById(tab.dataset.tab).classList.add("active");
+            });
+        });
+    </script>
+</body>
+</html>
